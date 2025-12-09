@@ -3,7 +3,7 @@
  *
  * SPDX-License-Identifier: MIT
  */
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500  // default: 600
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1800  // default: 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 15    // default: 10
 
 #include <behaviors.dtsi>
@@ -24,13 +24,17 @@
 
 // Advanced mouse emulation configuration
 &mmv {
-    time-to-max-speed-ms = <500>;
-    acceleration-exponent = <2>;
+    time-to-max-speed-ms = <300>;
+    acceleration-exponent = <1>;
 };
 
 &msc {
     time-to-max-speed-ms = <300>;
     acceleration-exponent = <1>;
+};
+
+&soft_off {
+    hold-time-ms = <2500>; // Only turn off it the key is held for 5 seconds or longer.
 };
 
 
@@ -113,7 +117,7 @@
                 };
                 tab_cls: tab_close {
                         compatible = "zmk,behavior-macro";
-                        #binding-cells = <0>;
+              https://zmk.dev/docs/keymaps/behaviors/mod-morph          #binding-cells = <0>;
                         bindings = <&kp LG(W)>;
                 };
                 nav_fwd: nav_forward {
