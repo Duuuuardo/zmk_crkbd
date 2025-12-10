@@ -15,7 +15,7 @@
 #include <dt-bindings/zmk/pointing.h>
 
 // Shorthand aliases for complex mod-tap combinations
-#define MEH LC(LA(LGUI))
+#define MEH LC(LS(LALT))
 #define MEH_EQ &mt_thumb MEH EQUAL
 #define MEH_GR &mt_thumb MEH GRAVE
 #define SH_ES &mt_thumb LSHFT ESC
