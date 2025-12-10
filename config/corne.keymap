@@ -106,10 +106,11 @@
                 compatible = "zmk,combos";
 
                 // Hardware soft off combo: Press top-left (left side) + top-right (right side)
-                combo_hw_soft_off {
+                combo_soft_off {
                         timeout-ms = <100>;
                         key-positions = <0 11>;  // TAB (left) + ' (right)
                         bindings = <&soft_off>;
+                        slow-release;
                 };
         };
 
@@ -177,7 +178,7 @@
                 compatible = "zmk,keymap";
 
                 colemak_layer {
-                        display-name = "COLEMAK";
+                        display-name = "BASE";
 // -----------------------------------------------------------------------------------------
 // | TAB  |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L  |  U  |  Y  |  ;  |  '   |
 // | ESC/S|  A  | R/C | S/A | T/G |  G  |   |  M  | N/G | E/A | I/C |  O  | ENT/S|
